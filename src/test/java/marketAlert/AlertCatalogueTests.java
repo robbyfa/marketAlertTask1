@@ -70,7 +70,7 @@ public class AlertCatalogueTests {
         catalogue.addAlert();
 
         //Verify
-        Assertions.assertEquals(5, fileManager.numCallsToSaveProductToFile);
+        Assertions.assertEquals(5, fileManager.numCallsToSaveAlertToFile);
     }
 
     @Test

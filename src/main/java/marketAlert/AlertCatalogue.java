@@ -103,7 +103,7 @@ public class AlertCatalogue {
 
 
 
-        FileWriter file = new FileWriter("C:/Users/rober/Desktop/marketAlertTask1/src/main/java/marketAlert/data.json", true);
+        FileWriter file = new FileWriter("C:/Users/rober/Desktop/marketAlertTask1/src/main/java/marketAlert/data.json", false);
         FileReader readFile = new FileReader("C:/Users/rober/Desktop/marketAlertTask1/src/main/java/marketAlert/data.json");
 
 

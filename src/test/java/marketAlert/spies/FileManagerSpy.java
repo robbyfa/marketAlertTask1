@@ -6,10 +6,10 @@ import marketAlert.utils.FileManager;
 
 public class FileManagerSpy implements FileManager {
 
-    public int numCallsToSaveProductToFile = 0;
+    public int numCallsToSaveAlertToFile = 0;
 
     public void saveProductToFile(Alert alert) {
-        numCallsToSaveProductToFile++;
+        numCallsToSaveAlertToFile++;
     }
 
 }
