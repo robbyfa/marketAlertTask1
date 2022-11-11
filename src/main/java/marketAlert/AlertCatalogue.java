@@ -81,6 +81,7 @@ public class AlertCatalogue {
             saveToJson(alert);
             added =  true;
         }
+        Thread.sleep(500);
         driver.quit();
 
         return added;
