@@ -147,4 +147,106 @@ public class AlertCatalogueTests {
         Assertions.assertEquals(0,size);
 
     }
+
+    @Test
+    public void testAlertsPublished() throws InterruptedException, java.text.ParseException, IOException {
+
+        //setup
+        AlertType alertType = Mockito.mock(AlertType.class);
+        Mockito.when(alertType.getAlertType()).thenReturn(alertType.ELECTRONICS);
+        catalogue.setAlertType(alertType);
+        catalogue.addAlert();
+
+        //exercise
+        catalogue.sendRequest();
+
+
+        //verify
+        Assertions.assertTrue(catalogue.countAlerts());
+
+    }
+
+    @Test
+    public void testAllAlertsHaveHeading() throws InterruptedException, java.text.ParseException, IOException {
+        //setup
+        AlertType alertType = Mockito.mock(AlertType.class);
+        Mockito.when(alertType.getAlertType()).thenReturn(alertType.ELECTRONICS);
+        catalogue.setAlertType(alertType);
+        catalogue.addAlert();
+
+        //exercise
+        catalogue.sendRequest();
+
+        Assertions.assertTrue(catalogue.findHeading());
+    }
+
+    @Test
+    public void testAllAlertsHaveIcons() throws InterruptedException, java.text.ParseException, IOException {
+        //setup
+        AlertType alertType = Mockito.mock(AlertType.class);
+        Mockito.when(alertType.getAlertType()).thenReturn(alertType.ELECTRONICS);
+        catalogue.setAlertType(alertType);
+        catalogue.addAlert();
+
+        //exercise
+        catalogue.sendRequest();
+
+        Assertions.assertTrue(catalogue.findIcon());
+    }
+
+    @Test
+    public void testAllAlertsHaveDescription() throws InterruptedException, java.text.ParseException, IOException {
+        //setup
+        AlertType alertType = Mockito.mock(AlertType.class);
+        Mockito.when(alertType.getAlertType()).thenReturn(alertType.ELECTRONICS);
+        catalogue.setAlertType(alertType);
+        catalogue.addAlert();
+
+        //exercise
+        catalogue.sendRequest();
+
+        Assertions.assertTrue(catalogue.findDescription());
+    }
+
+    @Test
+    public void testAllAlertsHavePrice() throws InterruptedException, java.text.ParseException, IOException {
+        //setup
+        AlertType alertType = Mockito.mock(AlertType.class);
+        Mockito.when(alertType.getAlertType()).thenReturn(alertType.ELECTRONICS);
+        catalogue.setAlertType(alertType);
+        catalogue.addAlert();
+
+        //exercise
+        catalogue.sendRequest();
+
+        Assertions.assertTrue(catalogue.findPrice());
+    }
+
+    @Test
+    public void testAllAlertsHaveUrl() throws InterruptedException, java.text.ParseException, IOException {
+        //setup
+        AlertType alertType = Mockito.mock(AlertType.class);
+        Mockito.when(alertType.getAlertType()).thenReturn(alertType.ELECTRONICS);
+        catalogue.setAlertType(alertType);
+        catalogue.addAlert();
+
+        //exercise
+        catalogue.sendRequest();
+
+        Assertions.assertTrue(catalogue.findLink());
+    }
+
+    @Test
+    public void testAllAlertsHaveImageUrl() throws InterruptedException, java.text.ParseException, IOException {
+        //setup
+        AlertType alertType = Mockito.mock(AlertType.class);
+        Mockito.when(alertType.getAlertType()).thenReturn(alertType.ELECTRONICS);
+        catalogue.setAlertType(alertType);
+        catalogue.addAlert();
+
+        //exercise
+        catalogue.sendRequest();
+
+        Assertions.assertTrue(catalogue.findImage());
+    }
 }
