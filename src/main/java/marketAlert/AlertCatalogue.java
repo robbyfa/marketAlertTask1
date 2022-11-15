@@ -52,7 +52,7 @@ public class AlertCatalogue {
     }
 
     public Boolean addAlert() throws IOException, InterruptedException, java.text.ParseException {
-        System.setProperty("webdriver.chrome.driver", "/Users/robertfenechadami/webtesting/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/rober/webtesting/chromedriver.exe");
         driver = new ChromeDriver();
 
         //Go to google and disable cookies dialog
@@ -109,8 +109,9 @@ public class AlertCatalogue {
 
 
 
-        FileWriter file = new FileWriter("C:/Users/rober/Desktop/marketAlertTask1/src/main/java/marketAlert/data.json", false);
-        FileReader readFile = new FileReader("C:/Users/rober/Desktop/marketAlertTask1/src/main/java/marketAlert/data.json");
+
+          FileWriter file = new FileWriter("C:/Users/rober/Desktop/marketAlertTask1/src/main/java/marketAlert/data.json", false);
+         FileReader readFile = new FileReader("C:/Users/rober/Desktop/marketAlertTask1/src/main/java/marketAlert/data.json");
 
 
 
@@ -119,7 +120,7 @@ public class AlertCatalogue {
 
 
 
-        file.close();
+         file.close();
     }
 
 
